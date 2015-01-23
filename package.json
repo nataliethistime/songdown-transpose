@@ -1,0 +1,26 @@
+{
+  "name": "songdown-transpose",
+  "version": "0.0.1",
+  "description": "The Songdown component which transposes a song.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1vasari/songdown-transpose"
+  },
+  "author": "Nathan McCallum <nmccallum7@gmail.com> (https://github.com/1Vasari)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1vasari/songdown-transpose/issues"
+  },
+  "homepage": "https://github.com/1vasari/songdown-transpose",
+  "dependencies": {
+    "lodash": "2.4.1"
+  },
+  "devDependencies": {
+    "chai": "1.10.0",
+    "mocha": "2.1.0"
+  }
+}
