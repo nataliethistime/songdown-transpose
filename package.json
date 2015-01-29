@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/1vasari/songdown-transpose",
   "dependencies": {
-    "lodash": "2.4.1"
+    "lodash": "3.0.0"
   },
   "devDependencies": {
     "chai": "1.10.0",
