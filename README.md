@@ -1,6 +1,7 @@
 # songdown-transpose
 The Songdown component which transposes a song.
 
+[![Build Status](https://travis-ci.org/1vasari/songdown-transpose.svg)](https://travis-ci.org/1vasari/songdown-transpose)
 [![Code Climate](https://codeclimate.com/github/1vasari/songdown-transpose/badges/gpa.svg)](https://codeclimate.com/github/1vasari/songdown-transpose)
 [![Dependency Status](https://david-dm.org/1vasari/songdown-transpose.svg)](https://david-dm.org/1vasari/songdown-transpose)
 [![devDependency Status](https://david-dm.org/1vasari/songdown-transpose/dev-status.svg)](https://david-dm.org/1vasari/songdown-transpose#info=devDependencies)
@@ -12,6 +13,7 @@ The Songdown component which transposes a song.
 ### 0.1.1
 - Update some deps.
 - New badges in the readme.
+- Starting using Travis CI to test.
 
 ### 0.1.0 (2015-01-23)
 - Initial separation from the `songdown-app` mess.
