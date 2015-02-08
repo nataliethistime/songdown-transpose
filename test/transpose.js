@@ -3,8 +3,6 @@
 var expect = require('chai').expect;
 var transpose = require('../index');
 
-// TODO: there are no tests for split chords!
-
 describe('transpose', function() {
 
   it('should be a function', function() {
@@ -146,6 +144,16 @@ describe('transpose', function() {
     expect(transpose('Gb', 24)).to.equal('Gb');
     expect(transpose('Ab', 24)).to.equal('Ab');
     expect(transpose('Bb', 24)).to.equal('Bb');
+  });
+
+  it('should transpose split chords', function() {
+    expect(transpose('C/E', 2)).to.equal('D/F#');
+    expect(transpose('D/F#', 2)).to.equal('E/G#');
+    expect(transpose('E/G#', 1)).to.equal('F/A');
+    expect(transpose('F/A', 2)).to.equal('G/B');
+    expect(transpose('G/B', 2)).to.equal('A/C#');
+    expect(transpose('A/C#', 2)).to.equal('B/D#');
+    expect(transpose('B/D#', 2)).to.equal('C#/F');
   });
 
 });

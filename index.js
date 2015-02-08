@@ -40,13 +40,15 @@ function transpose(chord, increment) {
   }
 
   if (chord.indexOf('/') > -1) {
-    return transposeSplitChord(chord);
+    return transposeSplitChord(chord, increment);
   }
 
   var scale = getScale(chord);
   var root = getRoot(chord);
-
   var index = scale.indexOf(root);
+
+  // TODO: this should all be factored out into another method, but I'm not sure how best to do it.
+  //   Maybe it's fine here.
   if (index === -1) {
     return undefined;
   }

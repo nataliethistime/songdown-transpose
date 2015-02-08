@@ -10,9 +10,9 @@ The Songdown component which transposes a song.
 
 # Changes
 
-### 0.1.1
-- Update some deps.
+### 0.1.2 (2015-02-08)
 - New badges in the readme.
+- Wrote a bunch of unit tests.
 - Starting using Travis CI to test.
 
 ### 0.1.0 (2015-01-23)
