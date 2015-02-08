@@ -9,6 +9,17 @@ describe('transpose', function() {
     expect(transpose).to.be.a('function');
   });
 
+  it('should handle weird input', function() {
+    expect(transpose(null, 5)).to.equal(undefined);
+    expect(transpose(undefined, 5)).to.equal(undefined);
+    expect(transpose(666, 5)).to.equal(undefined);
+    expect(transpose('illuminati', 5)).to.equal(undefined);
+
+    expect(transpose('C', null)).to.equal(undefined);
+    expect(transpose('C', undefined)).to.equal(undefined);
+    expect(transpose('C', 'illuminati')).to.equal(undefined);
+  });
+
   it('should transpose up a full tone', function() {
     expect(transpose('C', 2)).to.equal('D');
     expect(transpose('C#', 2)).to.equal('D#');

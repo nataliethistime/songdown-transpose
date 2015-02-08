@@ -3,8 +3,10 @@
 var _ = require('lodash');
 
 // This method is based mostly off of this SO answer http://stackoverflow.com/a/7936871.
-// I've modified it to be more coffee-like and to output flats instead of sharps.
 function transpose(chord, increment) {
+  if (typeof chord !== 'string' || typeof increment !== 'number') {
+    return undefined;
+  }
 
   var splitted = chord.split('/');
   if (splitted.length > 1) {
@@ -30,7 +32,9 @@ function transpose(chord, increment) {
   }
 
   var index = scale.indexOf(root);
-  if (index === -1) return '??';
+  if (index === -1) {
+    return undefined;
+  }
 
   var newIndex = (index + increment + scale.length) % scale.length;
   return scale[newIndex] + chord.substring(root.length);
