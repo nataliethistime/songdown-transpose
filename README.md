@@ -1,4 +1,5 @@
 # songdown-transpose
+
 The Songdown component which transposes a song.
 
 [![Build Status](https://travis-ci.org/1vasari/songdown-transpose.svg)](https://travis-ci.org/1vasari/songdown-transpose)
@@ -21,4 +22,4 @@ The Songdown component which transposes a song.
 
 # License
 
-This project is made with :heart: under the MIT license by Nathan McCallum.
+This project is made with love, under the MIT license, by [@1vasari](https://twitter.com/1vasari). :heart:
