@@ -1,12 +1,9 @@
 'use strict';
 
-var _ = require('lodash');
-
 var FLAT_SCALE  = 'C Db D Eb E F Gb G Ab A Bb B'.split(' ');
 var SHARP_SCALE = 'C C# D D# E F F# G G# A A# B'.split(' ');
 
-// If the chord is a flat, then the flat scale is used and vice versa.
-function getScale(chord) {
+var getScale = function(chord) {
   if (chord.length > 1) {
     if (chord.charAt(1) === '#') {
       return SHARP_SCALE;
@@ -14,29 +11,38 @@ function getScale(chord) {
       return FLAT_SCALE;
     }
   }
+
+  // Use SHARP_SCALE by default.
   return SHARP_SCALE;
-}
+};
 
-function getRoot(chord) {
+var getRoot = function(chord) {
   var root = chord.charAt(0);
-  var char = chord.charAt(1);
+  var accidental = chord.charAt(1);
 
-  if (_.includes(['#', 'b'], char)) {
-    return root + char;
+  if (accidental === '#' || accidental === 'b') {
+    return root + accidental;
   } else {
     return root;
   }
-}
+};
 
-function transposeSplitChord(chord, increment) {
-  return _.map(chord.split('/'), function(part) {
+var transposeSplitChord = function(chord, increment) {
+  var arr = chord.split('/');
+
+  return arr.map(function(part) {
     return transpose(part, increment);
   }).join('/');
-}
+};
 
-function transpose(chord, increment) {
-  if (typeof chord !== 'string' || typeof increment !== 'number') {
+var transpose = function(chord, increment) {
+
+  if (typeof chord !== 'string') {
     return undefined;
+  }
+
+  if (typeof increment !== 'number') {
+    return chord;
   }
 
   if (chord.indexOf('/') > -1) {
@@ -47,14 +53,12 @@ function transpose(chord, increment) {
   var root = getRoot(chord);
   var index = scale.indexOf(root);
 
-  // TODO: this should all be factored out into another method, but I'm not sure how best to do it.
-  //   Maybe it's fine here.
   if (index === -1) {
     return undefined;
   }
 
   var newIndex = (index + increment + scale.length) % scale.length;
   return scale[newIndex] + chord.substring(root.length);
-}
+};
 
 module.exports = transpose;

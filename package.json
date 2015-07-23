@@ -2,9 +2,9 @@
   "name": "songdown-transpose",
   "version": "0.1.2",
   "description": "The Songdown component which transposes a song.",
-  "main": "index.js",
+  "main": "transpose.js",
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,11 +16,7 @@
     "url": "https://github.com/1vasari/songdown-transpose/issues"
   },
   "homepage": "https://github.com/1vasari/songdown-transpose",
-  "dependencies": {
-    "lodash": "3.0.0"
-  },
   "devDependencies": {
-    "chai": "1.10.0",
-    "mocha": "2.1.0"
+    "jest-cli": "0.4.16"
   }
 }

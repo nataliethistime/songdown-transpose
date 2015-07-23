@@ -11,6 +11,11 @@ The Songdown component which transposes a song.
 
 # Changes
 
+### 0.1.4
+- Removed Lodash dependency.
+- Move tests over to using Jest.
+- Added a `.jshintrc` file to the repo.
+
 ### 0.1.2 (2015-02-08)
 - New badges in the readme.
 - Wrote a bunch of unit tests.
