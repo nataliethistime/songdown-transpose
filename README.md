@@ -11,6 +11,9 @@ The Songdown component which transposes a song.
 
 # Changes
 
+### 0.3.0 (2015-08-07)
+- Implemented `transposeLine` function.
+
 ### 0.2.0 (2015-07-23)
 - Removed Lodash dependency.
 - Move tests over to using Jest.
