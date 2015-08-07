@@ -61,4 +61,26 @@ var transpose = function(chord, increment) {
   return scale[newIndex] + chord.substring(root.length);
 };
 
-module.exports = transpose;
+var transposeLine = function(line, increment) {
+
+  if (!line) {
+    return undefined;
+  }
+
+  return line.replace(/\S+/g, function(match) {
+    // We do this to handle Chords that get put in brackets. This isn't part of the Songdown syntax
+    // per se however I read it to mean that a chord should go for half a bar rather than a
+    // whole bar.
+    if (match.charAt(0) === '(') {
+      var str = match.slice(1);
+      // NOTE: don't add a closing bracket because it's already there and it's ignored by the
+      // transpose function.
+      return '(' + (transpose(str, increment) || str);
+    } else {
+      return transpose(match, increment) || match;
+    }
+  });
+};
+
+module.exports.transpose = transpose;
+module.exports.transposeLine = transposeLine;

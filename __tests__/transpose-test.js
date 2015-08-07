@@ -1,17 +1,19 @@
 'use strict';
 
+/* globals jest, it, describe, expect */
+
 jest.dontMock('../transpose');
 
 describe('transpose', function() {
 
   it('should be a function', function() {
-    var transpose = require('../transpose');
+    var transpose = require('../transpose').transpose;
 
     expect(typeof transpose).toBe('function');
   });
 
   it('should handle weird input', function() {
-    var transpose = require('../transpose');
+    var transpose = require('../transpose').transpose;
 
     expect(transpose(null, 5)).toBeUndefined();
     expect(transpose(undefined, 5)).toBeUndefined();
@@ -24,7 +26,7 @@ describe('transpose', function() {
   });
 
   it('should transpose up a full tone', function() {
-    var transpose = require('../transpose');
+    var transpose = require('../transpose').transpose;
 
     expect(transpose('C', 2)).toBe('D');
     expect(transpose('C#', 2)).toBe('D#');
@@ -47,7 +49,7 @@ describe('transpose', function() {
   });
 
   it('should transpose up a semitone', function() {
-    var transpose = require('../transpose');
+    var transpose = require('../transpose').transpose;
 
     expect(transpose('C', 1)).toBe('C#');
     expect(transpose('C#', 1)).toBe('D');
@@ -70,7 +72,7 @@ describe('transpose', function() {
   });
 
   it('should transpose down a full tone', function() {
-    var transpose = require('../transpose');
+    var transpose = require('../transpose').transpose;
 
     expect(transpose('C', -2)).toBe('A#');
     expect(transpose('C#', -2)).toBe('B');
@@ -93,7 +95,7 @@ describe('transpose', function() {
   });
 
   it('should transpose down a semitone', function() {
-    var transpose = require('../transpose');
+    var transpose = require('../transpose').transpose;
 
     expect(transpose('C', -1)).toBe('B');
     expect(transpose('C#', -1)).toBe('C');
@@ -116,7 +118,7 @@ describe('transpose', function() {
   });
 
   it('should transpose an octave', function() {
-    var transpose = require('../transpose');
+    var transpose = require('../transpose').transpose;
 
     expect(transpose('C', 12)).toBe('C');
     expect(transpose('C#', 12)).toBe('C#');
@@ -160,7 +162,7 @@ describe('transpose', function() {
   });
 
   it('should transpose split chords', function() {
-    var transpose = require('../transpose');
+    var transpose = require('../transpose').transpose;
 
     expect(transpose('C/E', 2)).toBe('D/F#');
     expect(transpose('D/F#', 2)).toBe('E/G#');
