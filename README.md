@@ -11,6 +11,10 @@ The Songdown component which transposes a song.
 
 # Changes
 
+### 0.4.0
+- Move to testing with Mocha and Chai.
+- Use standard to lint the code.
+
 ### 0.3.0 (2015-08-07)
 - Implemented `transposeLine` function.
 
