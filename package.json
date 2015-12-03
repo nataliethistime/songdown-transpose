@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/1vasari/songdown-transpose",
   "devDependencies": {
-    "jest-cli": "0.4.16"
+    "jest-cli": "0.8.0"
   }
 }
