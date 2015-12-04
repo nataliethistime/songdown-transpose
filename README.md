@@ -3,7 +3,7 @@
 The Songdown component which transposes a song.
 
 [![Build Status](https://travis-ci.org/1vasari/songdown-transpose.svg)](https://travis-ci.org/1vasari/songdown-transpose)
-[![Code Climate](https://codeclimate.com/github/1vasari/songdown-transpose/badges/gpa.svg)](https://codeclimate.com/github/1vasari/songdown-transpose)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Dependency Status](https://david-dm.org/1vasari/songdown-transpose.svg)](https://david-dm.org/1vasari/songdown-transpose)
 [![devDependency Status](https://david-dm.org/1vasari/songdown-transpose/dev-status.svg)](https://david-dm.org/1vasari/songdown-transpose#info=devDependencies)
 
