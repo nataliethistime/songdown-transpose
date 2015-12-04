@@ -11,7 +11,7 @@ The Songdown component which transposes a song.
 
 # Changes
 
-### 0.4.0
+### 0.4.0 (2015-12-04)
 - Move tests to Mocha and Chai.
 - Use [standard](https://github.com/feross/standard) to lint the code.
 - Update Travis CI test platforms (Now: `4.x.x` and `5.x.x`).
