@@ -36,4 +36,4 @@ The Songdown component which transposes a song.
 
 # License
 
-This project is made with love, under the MIT license, by [@1vasari](https://twitter.com/1vasari). :heart:
+MIT
