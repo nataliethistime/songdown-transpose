@@ -1,6 +1,6 @@
 {
   "name": "songdown-transpose",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "The Songdown component which transposes a song.",
   "main": "index.js",
   "scripts": {
